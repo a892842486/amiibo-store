@@ -18,7 +18,7 @@ AWS S3 圖片儲存、Action Mailer 與 i18n 多語系切換。
 | | |
 |---|---|
 | 🌐 Live Demo | [jdstore20260510.onrender.com](https://jdstore20260510.onrender.com/) |
-| 📁 GitHub | [github.com/a892842486/jdstore20260510](https://github.com/a892842486/jdstore20260510) |
+| 📁 GitHub | [github.com/a892842486/amiibo-store](https://github.com/a892842486/amiibo-store) |
 
 > ⚠️ 部署於 Render 免費方案，首次開啟可能需要等待約 30 秒啟動。
 
@@ -166,8 +166,8 @@ i18n Preview
 ### 步驟
 
 ```bash
-git clone git@github.com:a892842486/jdstore20260510.git
-cd jdstore20260510/jdstore
+git clone git@github.com:a892842486/amiibo-store.git
+cd amiibo-store
 bundle install
 ```
 

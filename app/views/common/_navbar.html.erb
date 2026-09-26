@@ -1,5 +1,5 @@
 <nav class="bg-white shadow">
-  <div class="max-w-7xl mx-auto flex justify-between items-center">
+  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
     <div class="flex items-center">
       <%= link_to root_path,
           class: "bg-red-600 text-white px-6 py-4 text-xl font-bold flex items-center hover:bg-red-700 transition" do %>
@@ -8,9 +8,6 @@
           <%= t("navbar.brand") %>
         </span>
       <% end %>
-      <%= link_to t("navbar.products") || t("navbar.products"),
-          products_path,
-          class: "ml-3 inline-flex items-center px-5 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition" %>
     </div>
     <div class="flex items-center space-x-4">
       <div class="flex justify-end space-x-4">
@@ -32,17 +29,22 @@
               end
           %>
 
-          <div class="flex items-center rounded-full border border-gray-300 bg-white p-1 text-sm shadow-sm">
+          <div class="inline-flex items-center rounded-full border border-gray-300 bg-white p-1 text-sm shadow-sm">
             <%= link_to "中文",
                 zh_path,
-                class: "rounded-full px-3 py-1 transition #{current_locale == :'zh-TW' ? 'bg-blue-500 text-white shadow-sm' : 'text-gray-500 hover:text-gray-900'}" %>
+                class: "rounded-full px-3 py-1 transition #{current_locale == :'zh-TW' ? 'bg-gray-500 text-white' : 'text-gray-500 hover:text-gray-900'}" %>
 
             <%= link_to "EN",
                 en_path,
-                class: "rounded-full px-3 py-1 transition #{current_locale == :en ? 'bg-blue-500 text-white shadow-sm' : 'text-gray-500 hover:text-gray-900'}" %>
+                class: "rounded-full px-3 py-1 transition #{current_locale == :en ? 'bg-gray-500 text-white' : 'text-gray-500 hover:text-gray-900'}" %>
           </div>
 
-        <%= link_to carts_path, class: "flex items-center text-gray-700 hover:text-gray-900" do %>
+      <%= link_to t("navbar.products"),
+          products_path,
+          class: "inline-flex items-center rounded-lg px-4 py-2 text-gray-700 transition hover:bg-gray-100 hover:text-gray-900" %>
+
+        <%= link_to carts_path,
+            class: "inline-flex flex items-center gap-1.5 rounded-lg px-2 py-2 text-gray-700 transition hover:bg-gray-100 hover:text-gray-900" do %>
           <!-- SVG shopping cart icon -->
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -53,16 +55,14 @@
       </div>
 
       <% if !current_user %>
-        <%= link_to t("navbar.register"), new_user_registration_path,
-            class: "text-gray-700 hover:text-blue-500" %>
-
         <%= link_to t("navbar.login"), new_user_session_path,
-            class: "text-gray-700 hover:text-blue-500" %>
-
+            class: "rounded-lg px-4 py-2 text-gray-700 transition hover:bg-gray-100 hover:text-gray-900" %>
       <% else %>
         <div class="relative group">
           <!-- 按鈕 -->
-          <button class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 transition">
+          <button
+            class="inline-flex items-center rounded-lg px-4 py-2 text-gray-700 transition hover:bg-gray-100"
+          >
             Hi, <%= current_user.email %>
 
             <svg xmlns="http://www.w3.org/2000/svg"
@@ -80,19 +80,19 @@
                       opacity-0 invisible group-hover:opacity-100 group-hover:visible
                       transition duration-150 z-50">
 
-            <div class="bg-white border border-gray-200 rounded-lg shadow-lg">
+            <div class="overflow-hidden bg-white border border-gray-200 rounded-lg shadow-lg">
               <% if current_user&.admin? %>
                 <%= link_to t("navbar.admin_products"), admin_products_path,
-                    class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" %>
+                    class: "block px-4 py-2 text-gray-700 hover:bg-gray-100" %>
               <% end %>
               <%= link_to t("navbar.order_history"), account_orders_path,
-                       class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" %>
+                       class: "block px-4 py-2 text-gray-700 hover:bg-gray-100" %>
 
               <div class="border-t border-gray-100"></div>
 
               <%= link_to destroy_user_session_path,
                   data: { turbo_method: :delete },
-                  class: "flex items-center px-4 py-2 text-sm text-red-500 hover:bg-red-50" do %>
+                  class: "flex items-center px-4 py-2 text-gray-700 transition hover:bg-gray-100" do %>
 
                   <svg xmlns="http://www.w3.org/2000/svg"
                        class="h-4 w-4 mr-2"

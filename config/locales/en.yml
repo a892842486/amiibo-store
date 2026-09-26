@@ -1,9 +1,9 @@
 en:
   site:
-    title: "Nintendo amiibo Store (Demo)"
+    title: "Amiibo Store (Demo)"
 
   navbar:
-    brand: "Nintendo amiibo Store (Demo)"
+    brand: "Amiibo Store (Demo)"
     chinese: "中文"
     english: "EN"
     cart: "Cart"
@@ -155,10 +155,10 @@ en:
       message_html: "Your order <strong>%{order_token}</strong> has been placed."
 
     subject:
-      order_placed: "[JDStore] Order Confirmation - %{token}"
-      apply_cancel: "[JDStore] User %{email} requested cancellation for order %{token}"
-      shipped: "[JDStore] Your order %{token} has been shipped"
-      cancelled: "[JDStore] Your order %{token} has been cancelled"
+      order_placed: "[Amiibo Store] Order Confirmation - %{token}"
+      apply_cancel: "[Amiibo Store] User %{email} requested cancellation for order %{token}"
+      shipped: "[Amiibo Store] Your order %{token} has been shipped"
+      cancelled: "[Amiibo Store] Your order %{token} has been cancelled"
 
   flash:
     account:

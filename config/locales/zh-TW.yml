@@ -1,9 +1,9 @@
 zh-TW:
   site:
-    title: "任天堂 amiibo 專賣（Demo）"
+    title: "Amiibo Store (Demo)"
 
   navbar:
-    brand: "任天堂 amiibo 專賣（Demo）"
+    brand: "Amiibo Store (Demo)"
     chinese: "中文"
     english: "EN"
     cart: "購物車"
@@ -153,10 +153,10 @@ zh-TW:
       message_html: "您的訂單 <strong>%{order_token}</strong> 已成立。"
 
     subject:
-      order_placed: "[JDStore] 訂單成立通知 - %{token}"
-      apply_cancel: "[JDStore] 用戶 %{email} 申請取消訂單 %{token}"
-      shipped: "[JDStore] 您的訂單 %{token} 已出貨"
-      cancelled: "[JDStore] 您的訂單 %{token} 已取消"
+      order_placed: "[Amiibo Store] 訂單成立通知 - %{token}"
+      apply_cancel: "[Amiibo Store] 用戶 %{email} 申請取消訂單 %{token}"
+      shipped: "[Amiibo Store] 您的訂單 %{token} 已出貨"
+      cancelled: "[Amiibo Store] 您的訂單 %{token} 已取消"
 
   flash:
     account:

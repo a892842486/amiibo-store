@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title><%= t("site.title") %></title>
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
+<html class="min-h-screen">
+  <head>
+    <title><%= t("site.title") %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-  <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
-  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-  <%= javascript_importmap_tags %>
-</head>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
 
-<body class="bg-gray-100 text-gray-900 min-h-screen">
-  <%= render "common/navbar" %>
+  <body class="flex min-h-screen flex-col bg-gray-100 text-gray-900">
+    <%= render "common/navbar" %>
 
-  <!-- Main Content -->
-  <div class="max-w-7xl mx-auto mt-6 px-4">
-    <%= render "common/flashes" %>
-    <%= yield %>
-  </div>
+    <!-- Main Content -->
+    <main class="flex-1">
+      <div class="mx-auto mt-6 max-w-7xl px-4">
+        <%= render "common/flashes" %>
+        <%= yield %>
+      </div>
+    </main>
 
-  <%= render "common/footer" %>
-</body>
+    <%= render "common/footer" %>
+  </body>
 </html>
