@@ -1,6 +1,6 @@
 <%= render "orders/order_detail", order: @order %>
 
-<div class="mt-6 flex justify-end gap-3">
+<div class="mt-6 flex justify-end gap-3 pb-12">
   <% if !@order.is_paid? %>
     <%= button_to t("account.orders.pay_with_creditcard"),
       pay_with_creditcard_account_order_path(@order),
