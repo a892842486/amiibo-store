@@ -9,7 +9,7 @@ AWS S3 圖片儲存、Action Mailer 與 i18n 多語系切換。
 開發過程中曾遇到 Bootstrap 與 Rails 8 相容性問題，
 最終改以 Tailwind CSS 重構前端並完成部署。
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/db7393b2-1b56-4282-8883-7b5091d0412c" />
+<img width="1920" height="1080" alt="amiibo-store-home" src="https://github.com/user-attachments/assets/c2252c80-bba0-40cf-aff7-c5180ba387a0" />
 
 ---
 
@@ -113,46 +113,61 @@ Bootstrap 與 Rails 8 的兼容性問題
 
 ### Storefront
 
-Homepage
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/db7393b2-1b56-4282-8883-7b5091d0412c" />
+#### 1. Homepage
 
-Product Page
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e361614c-b053-4bb2-939f-48081d0d2c02" />
+<img width="1920" height="1080" alt="01-amiibo-store-home" src="https://github.com/user-attachments/assets/7d87593f-ef2c-4151-be63-50b48b0eb7f2" />
 
-Shopping Cart
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/13dfc00e-a3d5-4ed5-83f2-efd80b2b8ac8" />
+#### 2. Product Listing
 
-Checkout Page
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a1443cef-56ad-480e-a235-2739c0583047" />
+<img width="1920" height="1080" alt="02-amiibo-store-product" src="https://github.com/user-attachments/assets/f5b831eb-8750-42f2-89e1-96d9b82335de" />
 
-Order Detail
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4943769a-29f3-47a9-8672-9a88f0e8a4db" />
+#### 3. Product Details
+
+<img width="1920" height="1080" alt="03-amiibo-store-product-show" src="https://github.com/user-attachments/assets/298b6a3e-33b0-4217-8f82-db3e14fc1277" />
+
+#### 4. Shopping Cart
+
+<img width="1920" height="1080" alt="04-amiibo-store-cart" src="https://github.com/user-attachments/assets/78c431bb-1ab4-4a26-b055-b0852b9cc9f4" />
+
+#### 5. Checkout
+
+<img width="1920" height="1080" alt="05-amiibo-store-checkout" src="https://github.com/user-attachments/assets/d93fc7d6-ddcc-4054-bf00-1231ee43c554" />
+
+#### 6. Order Details
+
+<img width="1920" height="1080" alt="06-amiibo-store-order-show" src="https://github.com/user-attachments/assets/302f2d76-218d-46f7-b6f8-28d5aa6e5974" />
 
 <details>
 <summary>More Screenshots</summary>
-Order History
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a09edd2e-4c56-4c43-a483-527e62b8fdfc" />
+
+### Order Notification
+
+#### 7. Order Confirmation Email
+
+<img width="1920" height="1080" alt="07-amiibo-store-order-email" src="https://github.com/user-attachments/assets/e80715cb-9d42-49ce-8add-08f97c39562f" />
 
 ### Admin Dashboard
 
-Admin Dashboard
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4d316ff3-30f7-42e0-822a-1359e81abe0d" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ae0561e1-7a7c-405d-84b5-8717b575e725" />
+#### 8. Product Management
 
-### Authentication
+<img width="1920" height="1080" alt="08-amiibo-store-admin-products" src="https://github.com/user-attachments/assets/45e083fd-cbc8-4ce5-9241-c3956d1232d5" />
 
-Login/Register
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0c20d6b4-4798-4379-a1b3-775f4089c73e" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/58c9843a-a640-4e94-81ee-854957c7f8d8" />
+#### 9. Order Management
 
-### Additional Features
+<img width="1920" height="1080" alt="09-amiibo-store-admin-orders" src="https://github.com/user-attachments/assets/71d8c709-67e5-48e3-a3cc-c09e3ae090f9" />
 
-Email Preview
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6586af2a-c2ca-4680-9caf-7046a7895727" />
+#### 10. Admin Order Details
 
-i18n Preview
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f998db8c-a36b-4fe3-9693-d314a7b7a93d" />
+<img width="1920" height="1080" alt="10-amiibo-store-admin-order-show" src="https://github.com/user-attachments/assets/5883e58b-c29c-40e1-af09-f84791c3c755" />
+
+### Internationalization
+
+#### 11. English UI Preview
+
+<img width="1920" height="1080" alt="11-amiibo-store-i18n" src="https://github.com/user-attachments/assets/5f3c8eb7-3505-4a2b-9e2c-d8840d4c3b0e" />
+
 </details>
+
 ---
 
 ## ⚙️ Installation
