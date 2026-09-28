@@ -120,3 +120,110 @@ products.each do |attributes|
 
   product.save!
 end
+
+# 展示用訂單 Seed
+# 使用虛構資料，方便展示後台不同訂單狀態
+
+admin = User.find_by!(email: "admin@test.com")
+
+demo_orders = [
+  {
+    name: "展示顧客 01",
+    state: :order_placed,
+    items: [ [ "卡比", 1 ], [ "怨虎龍", 1 ] ]
+  },
+  {
+    name: "展示顧客 02",
+    state: :order_placed,
+    items: [ [ "林克【王國之淚】", 1 ] ]
+  },
+  {
+    name: "展示顧客 03",
+    state: :order_placed,
+    items: [ [ "賽菲羅斯", 2 ] ]
+  },
+  {
+    name: "展示顧客 04",
+    state: :paid,
+    items: [ [ "豆狸 & 粒狸", 1 ], [ "卡比", 1 ] ]
+  },
+  {
+    name: "展示顧客 05",
+    state: :shipping,
+    items: [ [ "小螢【幻界】", 1 ], [ "小擬【幻界】", 1 ] ]
+  },
+  {
+    name: "展示顧客 06",
+    state: :shipping,
+    items: [ [ "小姬【秩序篇】", 1 ], [ "飯田【秩序篇】", 1 ] ]
+  },
+  {
+    name: "展示顧客 07",
+    state: :shipped,
+    items: [ [ "鬼福【塗擊隊】", 1 ] ]
+  },
+  {
+    name: "展示顧客 08",
+    state: :shipped,
+    items: [ [ "曼曼【塗擊隊】", 1 ], [ "莎莎【塗擊隊】", 1 ] ]
+  },
+  {
+    name: "展示顧客 09",
+    state: :order_cancelled,
+    items: [ [ "怨虎龍", 1 ] ]
+  }
+]
+
+demo_orders.each do |demo|
+  # 以展示顧客名稱識別，避免重複建立
+  order = Order.find_or_initialize_by(
+    user: admin,
+    billing_name: demo[:name]
+  )
+
+  next if order.persisted?
+
+  order.assign_attributes(
+    billing_address: "臺北市信義區市府路1號",
+    shipping_name: demo[:name],
+    shipping_address: "臺北市中正區重慶南路一段122號",
+    payment_method: "信用卡"
+  )
+
+  # 建立訂單明細，保留下單時的商品名稱與價格
+  demo[:items].each do |title, quantity|
+    product = Product.find_by!(title: title)
+
+    order.product_lists.build(
+      product_name: product.title,
+      product_price: product.price,
+      quantity: quantity
+    )
+  end
+
+  # 訂單總額依明細計算
+  order.total = order.product_lists.sum do |item|
+    item.product_price * item.quantity
+  end
+
+  ActiveRecord::Base.transaction do
+    order.save!
+
+    # 透過 AASM 事件轉換狀態
+    case demo[:state]
+    when :paid
+      order.make_payment!
+    when :shipping
+      order.make_payment!
+      order.ship!
+    when :shipped
+      order.make_payment!
+      order.ship!
+      order.deliver!
+    when :order_cancelled
+      order.cancel_order!
+    end
+  end
+
+  puts "建立展示訂單：#{demo[:name]}（#{order.aasm_state}）"
+end
