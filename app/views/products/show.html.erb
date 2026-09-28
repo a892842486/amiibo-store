@@ -1,13 +1,13 @@
-<div class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow">
+<div class="max-w-4xl mx-auto mt-8 md:mt-18 p-6 bg-white rounded-lg shadow">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     <!-- 圖片 -->
     <div>
       <% if @product.image.attached? %>
         <%= image_tag url_for(@product.image.variant(resize_to_limit: [500, 500])),
-                      class: "w-full h-96 object-contain rounded-lg" %>
+                      class: "w-full h-60 md:h-96 object-contain rounded-lg" %>
       <% else %>
         <%= image_tag "no_image.jpeg",
-                      class: "w-full h-96 object-contain rounded-lg" %>
+                      class: "w-full h-60 md:h-96 object-contain rounded-lg" %>
       <% end %>
     </div>
 

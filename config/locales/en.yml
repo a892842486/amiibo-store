@@ -38,9 +38,9 @@ en:
     sold_out: "Sold out"
 
     hero:
-      title: "Explore the World of Nintendo Games with amiibo"
-      subtitle: "Connect amiibo with your console and unlock more interactive gameplay experiences"
-      badge: "Rails 8 E-commerce Portfolio Project"
+      title: "Discover the World of Nintendo with amiibo"
+      subtitle: "Explore amiibo figures and discover compatible in-game features across Nintendo games."
+      badge: "Rails 8 · E-commerce Demo"
 
   carts:
     title: "Cart"

@@ -38,9 +38,9 @@ zh-TW:
     sold_out: "已銷售一空，無法購買"
 
     hero:
-      title: "用 amiibo 探索任天堂遊戲世界"
-      subtitle: "將 amiibo 與主機連動，體驗更多遊戲互動樂趣"
-      badge: "Rails 8 電商網站作品展示"
+      title: "探索任天堂遊戲世界，發掘 amiibo 的樂趣"
+      subtitle: "收藏喜愛的 amiibo，探索各款遊戲的專屬互動體驗"
+      badge: "Rails 8 · 電商作品展示"
 
   carts:
     title: "購物車"
