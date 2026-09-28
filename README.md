@@ -166,7 +166,7 @@ i18n Preview
 ### 步驟
 
 ```bash
-git clone git@github.com:a892842486/amiibo-store.git
+git clone https://github.com/a892842486/amiibo-store.git
 cd amiibo-store
 bundle install
 ```
