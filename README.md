@@ -98,15 +98,6 @@ Bootstrap 與 Rails 8 的兼容性問題
 - CSS framework 整合方式
 - Tailwind utility-first 開發流程
 
-## 未來改善方向
-
-- 串接金流（Stripe / 綠界）
-- 商品搜尋與分類篩選
-- RSpec 測試
-- Docker 化部署
-- CI/CD workflow
-- Redis / Sidekiq 背景工作
-
 ---
 
 ## Screenshots
