@@ -110,7 +110,7 @@ Bootstrap 與 Rails 8 的兼容性問題
 
 #### 2. Product Listing
 
-<img width="1920" height="1080" alt="02-amiibo-store-product" src="https://github.com/user-attachments/assets/f5b831eb-8750-42f2-89e1-96d9b82335de" />
+<img width="1920" height="1080" alt="02-amiibo-store-product" src="https://github.com/user-attachments/assets/8593fefd-b142-4db1-9723-0204d73e2872" />
 
 #### 3. Product Details
 
